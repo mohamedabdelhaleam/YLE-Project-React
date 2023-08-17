@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/YLE-Project-React/static/css/main.71d8965e.css",
+    "main.js": "/YLE-Project-React/static/js/main.781485c7.js",
+    "static/media/unsplash_-uHVRvDr7pg.jpg": "/YLE-Project-React/static/media/unsplash_-uHVRvDr7pg.ccba11ec47da28dac7d5.jpg",
+    "static/media/static.jpg": "/YLE-Project-React/static/media/static.98a72c82d2d73475875c.jpg",
+    "static/media/Exlorer_Illustration1.png": "/YLE-Project-React/static/media/Exlorer_Illustration1.ce6c6bee692324612376.png",
+    "static/media/little-girl-participating-online-classes1.jpg": "/YLE-Project-React/static/media/little-girl-participating-online-classes1.e3487ffa6dcde3c92a5d.jpg",
+    "static/media/header-img.png": "/YLE-Project-React/static/media/header-img.c01cd9d8e48cc781522e.png",
+    "static/media/premuim.png": "/YLE-Project-React/static/media/premuim.489360b066e95de285d9.png",
+    "static/media/Key-rafiki1.png": "/YLE-Project-React/static/media/Key-rafiki1.9796d68908a236bf57f8.png",
+    "static/media/header-abstract.png": "/YLE-Project-React/static/media/header-abstract.4a9563109fe227fbad42.png",
+    "static/media/nahidphoto.png": "/YLE-Project-React/static/media/nahidphoto.d9f17d7df3d8a14434ea.png",
+    "static/media/YLE-logo.png": "/YLE-Project-React/static/media/YLE-logo.c6ebceba2c8dcfd8785f.png",
+    "index.html": "/YLE-Project-React/index.html",
+    "main.71d8965e.css.map": "/YLE-Project-React/static/css/main.71d8965e.css.map",
+    "main.781485c7.js.map": "/YLE-Project-React/static/js/main.781485c7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71d8965e.css",
+    "static/js/main.781485c7.js"
+  ]
+}
