@@ -7,7 +7,7 @@ import courseImg from '../../assets/images/little-girl-participating-online-clas
 
 const CourseCard = () => {
   return (
-    <div className='course relative py-2 w-[360px] px-2 h-[470px] rounded-md border-2  shadow-lg'>
+    <div className='course relative py-2 w-[360px] lg:w-[320px] px-2 h-[470px] rounded-md border-2  shadow-lg'>
         <div>
           <img src={courseImg} height={400} alt="Course img" className='rounded-lg min-h-[230px]'/>
           <div className='px-2'>

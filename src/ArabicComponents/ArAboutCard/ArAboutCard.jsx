@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdOutlineRocketLaunch } from 'react-icons/md';
 
-const AboutCard = () => {
+const ArAboutCard = () => {
   return (
     <div className='flex relative justify-center text-center items-center gap-28 xs:gap-16 flex-col p-4 py-16 xs:py-12 bg-[#FDF8EE] xs:w-[80%]'>
       <div className='w-3/4 h-3 bg-[#C4C4C4] absolute top-[-6px]'></div>
@@ -19,4 +19,4 @@ const AboutCard = () => {
   );
 }
 
-export default AboutCard;
+export default ArAboutCard;
