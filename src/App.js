@@ -15,6 +15,7 @@ import Quiz from './Quiz/Quiz';
 import ArHome from './ArHome/ArHome';
 import Profile from './Profile/Profile';
 import EditProfile from './components/EditProfile/EditProfile';
+import MyCourses from './components/MyCourses/MyCourses';
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
         <Route path='/profile' element={<Profile />}>
           <Route index element={<EditProfile />} />
           <Route path='edit-profile' element={<EditProfile />}/>
+          <Route path='my-courses' element={<MyCourses />}>
+          </Route>
         </Route>
         <Route path='/about' element={<About />}/>
         <Route path='/courses' element={<Courses />}/>

@@ -27,12 +27,12 @@ const Profile = () => {
                 </div>
             </div>
         </div>
-        <div className='my-32'>
+        <div className='my-24'>
             <div className='m-auto max-w-[1280px]'>
-                <div className='flex justify-between items-start gap-6'>
-                    <div>
+                <div className='flex justify-between items-start gap-16'>
+                    <div className='w-1/3'>
                         <ul className='text-lg font-medium capitalize'>
-                            <li className='py-2 rounded-md bg-[#FF7426] px-5 '> <Link to="edit-profile"> Edit Profile</Link></li>
+                            <li className='py-2 rounded-md bg-[#FF7426] text-white  px-5 '> <Link to="edit-profile" className='active:text-white '> Edit Profile</Link></li>
                             <li className='py-2 rounded-md px-5'> <Link to="my-courses"> my Courses</Link></li>
                             <li className='py-2 rounded-md px-5'> <Link to="account-security"> Account Security</Link></li>
                             <li className='py-2 rounded-md px-5'> <Link to="achievements"> Achievements</Link></li>
