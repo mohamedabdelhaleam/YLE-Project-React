@@ -10,8 +10,8 @@ const InfoCard = () => {
         </div>
       </div>
       <div>
-        <div className='text-2xl'>احصل على شهادة</div>
-        <div className='text-sm opacity-60'>خلافًا للاعتقاد الشائع ، فإن Lorem Ipsum ليس مجرد نص عشوائي. لها جذور في BC ، مما يجعلها أكثر من 2000 عام.</div>
+        <div className='text-2xl'>Get Ready For a Career</div>
+        <div className='text-sm opacity-60'>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a BC, making it over 2000 years old.</div>
       </div>
     </div>
   );

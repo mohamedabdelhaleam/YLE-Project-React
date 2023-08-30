@@ -3,7 +3,7 @@ import { AiOutlineHome } from 'react-icons/ai';
 import logo from '../assets/images/YLE-logo.png'
 import ForgetImg from '../assets/images/Key-rafiki1.png'
 
-const Login = () => {
+const ForgetPassword = () => {
   return (
     <div className='bg-[#FDF8EE] w-full h-screen py-6'>
       <div className='m-auto max-w-[1280px]'>
@@ -36,4 +36,4 @@ const Login = () => {
   );
 }
 
-export default Login;
+export default ForgetPassword;

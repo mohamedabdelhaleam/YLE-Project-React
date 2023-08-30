@@ -16,6 +16,12 @@ import ArHome from './ArHome/ArHome';
 import Profile from './Profile/Profile';
 import EditProfile from './components/EditProfile/EditProfile';
 import MyCourses from './components/MyCourses/MyCourses';
+import AllCourses from './components/AllCourses/AllCourses';
+import InProgressCourses from './components/InProgressCourses/InProgressCourses';
+import CompletedCourses from './components/CompletedCourses/CompletedCourses';
+import DeleteAccount from './components/DeleteAccount/DeleteAccount';
+import AccountSecurity from './components/AccountSecurity/AccountSecurity';
+import Achievements from './components/Achievements/Achievements';
 
 function App() {
   return (
@@ -28,7 +34,14 @@ function App() {
         <Route path='/profile' element={<Profile />}>
           <Route index element={<EditProfile />} />
           <Route path='edit-profile' element={<EditProfile />}/>
+          <Route path='achievements' element={<Achievements />}/>
+          <Route path='delete-account' element={<DeleteAccount />}/>
+          <Route path='account-security' element={<AccountSecurity />}/>
           <Route path='my-courses' element={<MyCourses />}>
+            <Route index element={<AllCourses />} />
+            <Route path='all-courses' element={<AllCourses />}/>
+            <Route path='inprogress-courses' element={<InProgressCourses />}/>
+            <Route path='completed-courses' element={<CompletedCourses />}/>
           </Route>
         </Route>
         <Route path='/about' element={<About />}/>
