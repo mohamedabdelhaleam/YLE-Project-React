@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f8dfadd2.css",
-    "main.js": "/static/js/main.d2c05127.js",
+    "main.css": "/static/css/main.4c04d65a.css",
+    "main.js": "/static/js/main.fa145e47.js",
     "static/media/unsplash_-uHVRvDr7pg.jpg": "/static/media/unsplash_-uHVRvDr7pg.ccba11ec47da28dac7d5.jpg",
     "static/media/static.jpg": "/static/media/static.98a72c82d2d73475875c.jpg",
     "static/media/Exlorer_Illustration1.png": "/static/media/Exlorer_Illustration1.ce6c6bee692324612376.png",
@@ -12,13 +12,15 @@
     "static/media/header-abstract.png": "/static/media/header-abstract.4a9563109fe227fbad42.png",
     "static/media/nahidphoto.png": "/static/media/nahidphoto.d9f17d7df3d8a14434ea.png",
     "static/media/Publish-article-bro1.png": "/static/media/Publish-article-bro1.91e9013f331c4c9691bd.png",
+    "static/media/Medallionsgold.png": "/static/media/Medallionsgold.cd632a3266f3fc2a1c7e.png",
+    "static/media/Medallions.png": "/static/media/Medallions.408c02ae07ee70b93870.png",
     "static/media/YLE-logo.png": "/static/media/YLE-logo.c6ebceba2c8dcfd8785f.png",
     "index.html": "/index.html",
-    "main.f8dfadd2.css.map": "/static/css/main.f8dfadd2.css.map",
-    "main.d2c05127.js.map": "/static/js/main.d2c05127.js.map"
+    "main.4c04d65a.css.map": "/static/css/main.4c04d65a.css.map",
+    "main.fa145e47.js.map": "/static/js/main.fa145e47.js.map"
   },
   "entrypoints": [
-    "static/css/main.f8dfadd2.css",
-    "static/js/main.d2c05127.js"
+    "static/css/main.4c04d65a.css",
+    "static/js/main.fa145e47.js"
   ]
 }
