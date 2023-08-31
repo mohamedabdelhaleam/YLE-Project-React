@@ -24,7 +24,7 @@ const Profile = () => {
                         
                     </div>
                     <div className='flex justify-between items-center gap-12'>
-                        <ul className='flex justify-between items-center gap-y gap-12'>
+                        <ul className='flex justify-between items-center gap-y gap-12 xs:hidden sm:hidden md:hidden'>
                             <li><NavLink to='/' className=' text-[#1D1D1D] text-lg font-semibold capitalize'>Home</NavLink></li>
                             <li><NavLink to='/about' className=' text-[#1D1D1D] text-lg font-semibold capitalize'>About</NavLink></li>
                             <li><NavLink to='/courses' className=' text-[#1D1D1D] text-lg font-semibold capitalize'>courses</NavLink></li>
@@ -40,9 +40,24 @@ const Profile = () => {
         </div>
         <div className='my-24'>
             <div className='m-auto max-w-[1280px]'>
-                <div className='flex justify-between items-start gap-4 xs:flex-col mb-16'>
-                    <div className='w-[20%] xs:w-[90%] xs:m-auto'>
-                        <ul className='text-lg font-medium capitalize xs:text-center'>
+                <div className='flex justify-between items-start gap-4  mb-16
+                xs:flex-col
+                sm:flex-col
+                md:flex-col
+                lg:flex-col
+                '>
+                    <div className='w-[20%] 
+                    xs:w-[90%] xs:m-auto
+                    sm:w-[90%] sm:m-auto
+                    md:w-[90%] md:m-auto
+                    lg:w-[90%] lg:m-auto
+                    '>
+                        <ul className='text-lg font-medium capitalize xs:text-center sm:text-center md:text-center  lg:text-center
+                        xs:border-b-2 xs:border-black
+                        sm:border-b-2 sm:border-black
+                        md:border-b-2 md:border-black
+                        lg:border-b-2 lg:border-black
+                        '>
                             <li  className={isEditCourses ?'py-2 rounded-md bg-[#FF7426] text-white  px-5':"py-2 px-5"}> <Link to="edit-profile" onClick={
                             (e)=>{
                                 setIsEditCourses(true)

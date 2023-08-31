@@ -24,7 +24,7 @@ const CourseCardMyCourse = () => {
               <div className='flex justify-evenly items-center text-sm'><AiOutlineDownload size={22} color='#343434' /><div className='px-1'>250 Sales</div>  </div>
             </div>
           </div>
-          <div className='h-[55px] w-[200px] left-20 bg-[#FF7426] text-white rounded-full flex justify-center items-center absolute bottom-[-27.5px]'>
+          <div className='h-[55px] w-[200px] left-[65px] bg-[#FF7426] text-white rounded-full flex justify-center items-center absolute bottom-[-27.5px]'>
             <div>Join Course</div>
           </div>
         </div>
