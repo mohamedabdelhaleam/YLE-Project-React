@@ -30,8 +30,8 @@ function App() {
         {
           // English Routes
         }
-        <Route path='/' element={<Home />}/>
-        <Route path='/profile' element={<Profile />}>
+        <Route path='/en/' element={<Home />}/>
+        <Route path='/en/profile' element={<Profile />}>
           <Route index element={<EditProfile />} />
           <Route path='edit-profile' element={<EditProfile />}/>
           <Route path='achievements' element={<Achievements />}/>
@@ -44,21 +44,21 @@ function App() {
             <Route path='completed-courses' element={<CompletedCourses />}/>
           </Route>
         </Route>
-        <Route path='/about' element={<About />}/>
-        <Route path='/courses' element={<Courses />}/>
-        <Route path='/courses-details' element={<CourseDetail />}/>
+        <Route path='/en/about' element={<About />}/>
+        <Route path='/en/courses' element={<Courses />}/>
+        <Route path='/en/courses-details' element={<CourseDetail />}/>
         <Route path='/loader' element={<Loader />}/>
-        <Route path='/login' element={<Login />}/>
-        <Route path='/watch-course' element={<EnrolledCourse />}/>
-        <Route path='/article-course' element={<Article />}/>
-        <Route path='/quiz' element={<Quiz />}/>
-        <Route path='/signup' element={<Signup />}/>
-        <Route path='/forget-password' element={<ForgetPassword />}/>
-        <Route path='/send-otp' element={<Otp />}/>
+        <Route path='/en/login' element={<Login />}/>
+        <Route path='/en/watch-course' element={<EnrolledCourse />}/>
+        <Route path='/en/article-course' element={<Article />}/>
+        <Route path='/en/quiz' element={<Quiz />}/>
+        <Route path='/en/signup' element={<Signup />}/>
+        <Route path='/en/forget-password' element={<ForgetPassword />}/>
+        <Route path='/en/send-otp' element={<Otp />}/>
         {
           // Arabic Routes
         }
-        <Route path='/ar/' element={<ArHome />}/>
+        <Route path='/' element={<ArHome />}/>
       </Routes>
     </>
   );
