@@ -12,7 +12,7 @@ const ArNavbar = () => {
                     <img src={logo} alt="Yle Logo" srcset="" />
                 </div>
                 <div className='flex justify-between items-center gap-12'>
-                    <ul className='flex justify-between flex-row-reverse  items-center gap-y gap-12'>
+                    <ul className='flex justify-between flex-row-reverse  items-center gap-y gap-12 xs:hidden sm:hidden md:hidden'>
                         <li><NavLink to='/' className='active:text-[#FF7426] text-[#1D1D1D] text-lg font-semibold capitalize'>الصفحة الرئيسة</NavLink></li>
                         <li><NavLink to='/about' className='active:text-[#FF7426] text-[#1D1D1D] text-lg font-semibold capitalize'>معلومات عنا</NavLink></li>
                         <li><NavLink to='/courses' className='active:text-[#FF7426] text-[#1D1D1D] text-lg font-semibold capitalize'>الدورات</NavLink></li>
