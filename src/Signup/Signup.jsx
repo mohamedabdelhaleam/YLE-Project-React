@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AiOutlineHome } from 'react-icons/ai';
 import logo from '../assets/images/YLE-logo.png'
 import loginImg from '../assets/images/Exlorer_Illustration1.png'
+import { Link } from 'react-router-dom';
 
-const Login = () => {
+const Signup = () => {
+  const [userName ,setUserName] =useState("")
+  const [email ,setEmail] =useState("")
+  const [password ,setPassword] =useState("")
+  const [confirmPassword ,setConfirmPassword] =useState("")
+
+  const confirmPass = ()=>{
+    if (password === confirmPassword) {
+      return true
+    }
+    else{
+      return false
+    }
+  }
+
+  console.log(confirmPass());
+
+  const handleSignup =(e)=>{
+
+  }
   return (
     <div className='bg-[#FDF8EE] w-full h-screen py-6'>
       <div className='m-auto max-w-[1280px]'>
@@ -19,30 +39,45 @@ const Login = () => {
                 <form action="" className='w-full xs:text-center sm:text-center md:text-center'>
                     <label htmlFor="" className='font-bold text-4xl'>Create Account</label>
                     <br />
-                    <label htmlFor="" className="text-lg font-normal font-['Poppins'] ">have a account ?  <span>Sign in</span> </label>
+                    <label htmlFor="" className="text-lg font-normal font-['Poppins'] ">have a account ?  <span><Link to="/en/login" className='text-[#6C70D1]'>Sign in</Link></span> </label>
                     <br />
                     <br />
                     <label htmlFor="" className='font-semibold text-2xl'>User Name</label>
                     <br />
-                    <input type="text" className="px-8 xs:py-2 my-2 py-3 text-[#6C70D1] text-lg rounded-full border-2 border-[#6C70D1] w-[70%]" placeholder='halim@gmail.com'/>
+                    <input type="text" className="px-8 xs:py-2 my-2 py-3 text-[#6C70D1] text-lg rounded-full border-2 border-[#6C70D1] w-[70%]" placeholder='halim@gmail.com' 
+                    onChange={(e)=>{
+                      setUserName(e.target.value)
+                    }}/>
                     <br />
                     <br />
                     <label htmlFor="" className='font-semibold text-2xl'>Email</label>
                     <br />
-                    <input type="email" className="px-8 xs:py-2 my-2 py-3 text-[#6C70D1] text-lg rounded-full border-2 border-[#6C70D1] w-[70%]" placeholder='halim@gmail.com'/>
+                    <input type="email" className="px-8 xs:py-2 my-2 py-3 text-[#6C70D1] text-lg rounded-full border-2 border-[#6C70D1] w-[70%]" placeholder='halim@gmail.com' 
+                    onChange={(e)=>{
+                      setEmail(e.target.value)
+                    }}/>
                     <br />
                     <br />
                     <label htmlFor="" className='font-semibold text-2xl'>Password</label>
                     <br />
-                    <input type="password" className="px-8 xs:py-2 my-2 py-3 text-[#6C70D1] text-lg rounded-full border-2 border-[#6C70D1] w-[70%]" placeholder='halim@gmail.com'/>
+                    <input type="password" className="px-8 xs:py-2 my-2 py-3 text-[#6C70D1] text-lg rounded-full border-2 border-[#6C70D1] w-[70%]" placeholder='halim@gmail.com' 
+                    onChange={(e)=>{
+                      setPassword(e.target.value)
+                    }}/>
                     <br />
                     <br />
                     <label htmlFor="" className='font-semibold text-2xl'>Confirm Password</label>
                     <br />
-                    <input type="password"  className="px-8 xs:py-2 my-2 py-3 text-[#6C70D1] text-lg rounded-full border-2 border-[#6C70D1] w-[70%]" placeholder='halim@gmail.com'/>
+                    <input type="password"  className="px-8 xs:py-2 my-2 py-3 text-[#6C70D1] text-lg rounded-full border-2 border-[#6C70D1] w-[70%]" placeholder='halim@gmail.com' 
+                    onChange={(e)=>{
+                      setConfirmPassword(e.target.value)
+                    }}/>
                     <br /><br /><br />
-                    <div className='bg-[#2B2E7F] text-white w-[70%] xs:m-auto sm:m-auto md:m-auto rounded-full flex justify-center items-center py-4 text-2xl font-bold px-4'>
-                        <button>Sign Up</button>
+                    <div className='bg-[#2B2E7F] text-white w-[70%] xs:m-auto sm:m-auto md:m-auto rounded-full flex justify-center items-center py-4 text-2xl font-bold px-4' 
+                    onClick={handleSignup}
+                    
+                    >
+                        <button disabled={confirmPass}>Sign Up</button>
                     </div>
                 </form>
             </div>
@@ -55,4 +90,4 @@ const Login = () => {
   );
 }
 
-export default Login;
+export default Signup;
