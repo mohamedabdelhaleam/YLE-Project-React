@@ -10,7 +10,6 @@ const Login = () => {
     const [password , setPassword] = useState("")
 
 
-    console.log(userName , password);
 
 
     const handleLogin =(e)=>{
@@ -33,7 +32,7 @@ const Login = () => {
                 <form action="" className='w-full xs:text-center sm:text-center md:text-center'>
                     <label htmlFor="" className='font-bold text-4xl'>WELCOME BACK!</label>
                     <br />
-                    <label htmlFor="" className="text-lg font-normal font-['Poppins'] ">Don’t have a account, <span><Link to="/en/signup">Sign up</Link> </span> </label>
+                    <label htmlFor="" className="text-lg font-normal font-['Poppins'] ">Don’t have a account, <span><Link to="/en/signup" className='text-[#6C70D1]'>Sign up</Link> </span> </label>
                     <br />
                     <br />
                     <label htmlFor="" className='font-semibold text-2xl'>Username</label>
@@ -56,7 +55,7 @@ const Login = () => {
                             <input type="checkbox" name="" id="" className='rounded-full w-4 h-4'/>
                             <label htmlFor="" className='text-lg font-normal px-4 xs:text-base'>Remember me</label>
                         </div>
-                        <label htmlFor="">Forget password?</label>
+                        <label htmlFor=""><Link to="/en/forget-password" className='text-[#6C70D1]'>Forget password?</Link></label>
                     </div>
                     <br />
                     <div className='bg-[#2B2E7F] shadow-md text-white w-[70%] xs:m-auto sm:m-auto md:m-auto rounded-full flex justify-center items-center py-4  text-2xl font-bold px-4'>
