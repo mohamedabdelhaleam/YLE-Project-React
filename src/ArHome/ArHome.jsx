@@ -13,6 +13,7 @@ import ArCourseCard from '../ArabicComponents/ArCourseCard/ArCourseCard';
 import ArPremCard from '../ArabicComponents/ArPremCard/ArPremCard';
 import ArSubscribe from '../ArabicComponents/ArSubscribe/ArSubscribe';
 import ArNavbar from '../ArabicComponents/ArNavbar/ArNavbar';
+import ArFooter from '../ArabicComponents/ArFooter/ArFooter';
 
 
 const ArHome = () => {
@@ -171,6 +172,7 @@ const ArHome = () => {
           <ArSubscribe />
         </div>
       </div>
+      <ArFooter />
       </div>
     </div>
   );
