@@ -23,6 +23,7 @@ import DeleteAccount from './components/DeleteAccount/DeleteAccount';
 import AccountSecurity from './components/AccountSecurity/AccountSecurity';
 import Achievements from './components/Achievements/Achievements';
 import ArAbout from './ArabicComponents/ArAbout/ArAbout';
+import ArLogin from './ArabicComponents/ArLogin/ArLogin';
 
 function App() {
   return (
@@ -61,6 +62,7 @@ function App() {
         }
         <Route path='/' element={<ArHome />}/>
         <Route path='/about' element={<ArAbout />}/>
+        <Route path='/login' element={<ArLogin />}/>
       </Routes>
     </>
   );
