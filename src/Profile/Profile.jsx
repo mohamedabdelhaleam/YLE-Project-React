@@ -25,11 +25,11 @@ const Profile = () => {
                     </div>
                     <div className='flex justify-between items-center gap-12'>
                         <ul className='flex justify-between items-center gap-y gap-12 xs:hidden sm:hidden md:hidden'>
-                            <li><NavLink to='/' className=' text-[#1D1D1D] text-lg font-semibold capitalize'>Home</NavLink></li>
-                            <li><NavLink to='/about' className=' text-[#1D1D1D] text-lg font-semibold capitalize'>About</NavLink></li>
-                            <li><NavLink to='/courses' className=' text-[#1D1D1D] text-lg font-semibold capitalize'>courses</NavLink></li>
-                            <li><NavLink to='/our-service' className=' text-[#1D1D1D] text-lg font-semibold capitalize'>our service</NavLink></li>
-                            <li><NavLink to='/contact-us' className=' text-[#1D1D1D] text-lg font-semibold capitalize'>contact us</NavLink></li>
+                            <li><NavLink to='/en/' className=' text-[#1D1D1D] text-lg font-semibold capitalize'>Home</NavLink></li>
+                            <li><NavLink to='/en/about' className=' text-[#1D1D1D] text-lg font-semibold capitalize'>About</NavLink></li>
+                            <li><NavLink to='/en/courses' className=' text-[#1D1D1D] text-lg font-semibold capitalize'>courses</NavLink></li>
+                            <li><NavLink to='/en/our-service' className=' text-[#1D1D1D] text-lg font-semibold capitalize'>our service</NavLink></li>
+                            <li><NavLink to='/en/contact-us' className=' text-[#1D1D1D] text-lg font-semibold capitalize'>contact us</NavLink></li>
                         </ul>
                         <div className='text-2xl font-medium capitalize bg-[#4D2C5E] rounded-full text-white py-2 px-8'>
                             login
