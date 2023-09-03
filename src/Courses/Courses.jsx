@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar/Navbar";
 import "../Home/Home.css";
 import CategoriesCard from "../components/CategoriesCard/CategoriesCard";
 import CourseCard from "../components/CourseCard/CourseCard";
+import Subscribe from "../components/Subscribe/Subscribe";
+import Footer from "../components/Footer/Footer";
 
 const Courses = () => {
   return (
@@ -47,10 +49,13 @@ const Courses = () => {
               <CourseCard />
               <CourseCard />
               <CourseCard />
-              <CourseCard />
             </div>
           </div>
         </div>
+      <div className="m-auto bg-[#FDF8EE] my-16 max-w-[1280px]">
+      <Subscribe />
+      </div>
+      <Footer />
       </div>
     </div>
   );
