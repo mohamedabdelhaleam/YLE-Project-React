@@ -24,6 +24,8 @@ import AccountSecurity from './components/AccountSecurity/AccountSecurity';
 import Achievements from './components/Achievements/Achievements';
 import ArAbout from './ArabicComponents/ArAbout/ArAbout';
 import ArLogin from './ArabicComponents/ArLogin/ArLogin';
+import ArCourses from './ArabicComponents/ArCourses/ArCourses';
+import ArSignup from './ArabicComponents/ArSignup/ArSignup';
 
 function App() {
   return (
@@ -63,6 +65,8 @@ function App() {
         <Route path='/' element={<ArHome />}/>
         <Route path='/about' element={<ArAbout />}/>
         <Route path='/login' element={<ArLogin />}/>
+        <Route path='/signup' element={<ArSignup />}/>
+        <Route path='/courses' element={<ArCourses />}/>
       </Routes>
     </>
   );
