@@ -22,27 +22,27 @@ const ArLogin = () => {
             <div><AiOutlineHome size={50}/></div>
             <div><img src={logo} alt="" srcset="" /></div>
         </div>
-        <div className='flex justify-between items-center  py-24 
-            xl:py-1 
+        <div className='flex justify-between items-start  py-24 flex-row-reverse 
+            xl:py-1
             xs:flex-col-reverse
             sm:flex-col-reverse
             md:flex-col-reverse
             '>
-            <div className='w-1/2 xs:w-full sm:w-full md:w-full flex justify-center items-center mx-4' >
-                <form action="" className='w-full xs:text-center sm:text-center md:text-center'>
-                    <label htmlFor="" className='font-bold text-4xl'>WELCOME BACK!</label>
+            <div className='w-1/2 xs:w-full sm:w-full md:w-full flex justify-center items-center mx-4 xs:m-auto' >
+                <form action="" className='w-full xs:text-center text-center sm:text-center md:text-center'>
+                    <label htmlFor="" className='font-bold text-4xl'>مرحبًا بعودتك!</label>
                     <br />
-                    <label htmlFor="" className="text-lg font-normal font-['Poppins'] ">Don’t have a account, <span><Link to="/signup" className='text-[#6C70D1]'>Sign up</Link> </span> </label>
+                    <label htmlFor="" className="text-lg font-normal font-['Poppins'] ">ليس لديك حساب ،  <span><Link to="/signup" className='text-[#6C70D1]'>قم بالتسجيل</Link> </span> </label>
                     <br />
                     <br />
-                    <label htmlFor="" className='font-semibold text-2xl'>Username</label>
+                    <label htmlFor="" className='font-semibold text-2xl'>اسم المستخدم</label>
                     <br />
                     <input type="text" className="px-8 my-2 xs:py-2 py-3 text-[#6C70D1] text-lg rounded-full border-2 border-[#6C70D1] w-[70%] xs:w-[90%] sm:w-[90%]" placeholder='halim@gmail.com'
                     onChange = {(e)=>{
                         setUserName(e.target.value)
                     }} />
                     <br />
-                    <label htmlFor="" className='font-semibold text-2xl'>Password</label>
+                    <label htmlFor="" className='font-semibold text-2xl'>كلمة المرور</label>
                     <br />
                     <input type="password"  className="px-8  my-2 xs:py-2 py-3 text-[#6C70D1] text-lg rounded-full border-2 border-[#6C70D1]  w-[70%] xs:w-[90%] sm:w-[90%]" placeholder='halim@gmail.com' 
                     onChange={(e)=>{
@@ -50,21 +50,21 @@ const ArLogin = () => {
                     }}/>
                     <br />
                     <br />
-                    <div className='flex justify-between items-center w-[70%] xs:w-[90%] xs:m-auto sm:w-[90%] sm:m-auto md:m-auto'>
+                    <div className='flex justify-between m-auto items-center w-[70%] xs:w-[90%] xs:m-auto sm:w-[90%] sm:m-auto md:m-auto'>
                         <div>
                             <input type="checkbox" name="" id="" className='rounded-full w-4 h-4'/>
-                            <label htmlFor="" className='text-lg font-normal px-4 xs:text-base'>Remember me</label>
+                            <label htmlFor="" className='text-lg font-normal px-4 xs:text-base'>تذكرنى</label>
                         </div>
-                        <label htmlFor=""><Link to="/forget-password" className='text-[#6C70D1]'>Forget password?</Link></label>
+                        <label htmlFor=""><Link to="/forget-password" className='text-[#6C70D1]'>نسيت كلمة المرور؟</Link></label>
                     </div>
                     <br />
-                    <div className='bg-[#2B2E7F] shadow-md text-white w-[70%] xs:m-auto sm:m-auto md:m-auto rounded-full flex justify-center items-center py-4  text-2xl font-bold px-4'>
-                        <button >Sign In</button>
+                    <div className='bg-[#2B2E7F] shadow-md m-auto text-white w-[70%] xs:m-auto sm:m-auto md:m-auto rounded-full flex justify-center items-center py-4  text-2xl font-bold px-4'>
+                        <button >تسجيل الدخول</button>
                     </div>
                     <br /><br />
-                    <hr className='w-[70%] hr-text m-auto'  data-content="or continue with"/>
+                    <hr className='w-[70%] hr-text m-auto'  data-content="او باستخدام"/>
                     <br />
-                    <div className='w-[70%] xs:w-[90%] xs:m-auto sm:m-auto md:m-auto flex xs:gap-2 justify-between items-center'>
+                    <div className='w-[70%] m-auto xs:w-[90%] xs:m-auto sm:m-auto md:m-auto flex xs:gap-2 justify-between items-center'>
                         <div className='h-14 rounded-lg w-24 border-2 border-[#6C70D1]'></div>
                         <div className='h-14 rounded-lg w-24 border-2 border-[#6C70D1]'></div>
                         <div className='h-14 rounded-lg w-24 border-2 border-[#6C70D1]'></div>
