@@ -26,6 +26,7 @@ import ArAbout from './ArabicComponents/ArAbout/ArAbout';
 import ArLogin from './ArabicComponents/ArLogin/ArLogin';
 import ArCourses from './ArabicComponents/ArCourses/ArCourses';
 import ArSignup from './ArabicComponents/ArSignup/ArSignup';
+import ArProfile from './ArabicComponents/ArProfile/ArProfile';
 
 function App() {
   return (
@@ -67,6 +68,19 @@ function App() {
         <Route path='/login' element={<ArLogin />}/>
         <Route path='/signup' element={<ArSignup />}/>
         <Route path='/courses' element={<ArCourses />}/>
+        <Route path='/profile' element={<ArProfile />}>
+        <Route index element={<EditProfile />} />
+          <Route path='edit-profile' element={<EditProfile />}/>
+          <Route path='achievements' element={<Achievements />}/>
+          <Route path='delete-account' element={<DeleteAccount />}/>
+          <Route path='account-security' element={<AccountSecurity />}/>
+          <Route path='my-courses' element={<MyCourses />}>
+            <Route index element={<AllCourses />} />
+            <Route path='all-courses' element={<AllCourses />}/>
+            <Route path='inprogress-courses' element={<InProgressCourses />}/>
+            <Route path='completed-courses' element={<CompletedCourses />}/>
+          </Route>
+        </Route>
       </Routes>
     </>
   );
