@@ -3,7 +3,6 @@ import headerImg from '../assets/images/header-img.png'
 import staticImg from '../assets/images/static.jpg'
 import premiumImg from '../assets/images/premuim.png'
 import './Home.css'
-import InfoCard from '../components/InfoCard/InfoCard';
 import StaticCard from '../components/StaticCard/StaticCard';
 import { FaRegFolderOpen } from 'react-icons/fa';
 import { AiFillPlayCircle } from 'react-icons/ai';
@@ -13,6 +12,7 @@ import ArCourseCard from '../ArabicComponents/ArCourseCard/ArCourseCard';
 import ArPremCard from '../ArabicComponents/ArPremCard/ArPremCard';
 import ArSubscribe from '../ArabicComponents/ArSubscribe/ArSubscribe';
 import ArNavbar from '../ArabicComponents/ArNavbar/ArNavbar';
+import ArInfoCard from '../ArabicComponents/ArInfoCard/ArInfoCard';
 import ArFooter from '../ArabicComponents/ArFooter/ArFooter';
 
 
@@ -63,9 +63,9 @@ const ArHome = () => {
               sm:w-full sm:flex-col sm:mx-0 sm:mt-28
               md:w-full md:flex-col md:mx-0 md:mt-28
               '>
-              <InfoCard />
-              <InfoCard />
-              <InfoCard />
+              <ArInfoCard />
+              <ArInfoCard />
+              <ArInfoCard />
             </div>
         </div>
       </header>
