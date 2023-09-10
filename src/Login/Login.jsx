@@ -3,17 +3,41 @@ import { AiOutlineHome } from 'react-icons/ai';
 import logo from '../assets/images/YLE-logo.png'
 import loginImg from '../assets/images/Exlorer_Illustration1.png'
 import './Login.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { baseUrl } from '../Api/Api';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
-    const [userName , setUserName] = useState("")
+    const [email , setEmail] = useState("")
     const [password , setPassword] = useState("")
-
-
+    const [userData , setUserData] = useState({})
+    const navigate = useNavigate()
 
 
     const handleLogin =(e)=>{
-        
+        e.preventDefault()
+        axios.post(`${baseUrl}/Account/login`,{
+            email: email,
+            password: password
+        }).then((response)=>{
+            setUserData(response.data)
+            localStorage.setItem("YleUserToken",response.data.token)
+            navigate('/en/profile')
+        }).catch((error)=>{
+            console.log(error);
+            toast.error(`${error.response.data}`, {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
+        })
     }
   return (
     <div className='bg-[#FDF8EE] w-full py-6'>
@@ -35,11 +59,11 @@ const Login = () => {
                     <label htmlFor="" className="text-lg font-normal font-['Poppins'] ">Don’t have a account, <span><Link to="/en/signup" className='text-[#6C70D1]'>Sign up</Link> </span> </label>
                     <br />
                     <br />
-                    <label htmlFor="" className='font-semibold text-2xl'>Username</label>
+                    <label htmlFor="" className='font-semibold text-2xl'>Email</label>
                     <br />
                     <input type="text" className="px-8 my-2 xs:py-2 py-3 text-[#6C70D1] text-lg rounded-full border-2 border-[#6C70D1] w-[70%] xs:w-[90%] sm:w-[90%]" placeholder='halim@gmail.com'
                     onChange = {(e)=>{
-                        setUserName(e.target.value)
+                        setEmail(e.target.value)
                     }} />
                     <br />
                     <label htmlFor="" className='font-semibold text-2xl'>Password</label>
@@ -59,7 +83,7 @@ const Login = () => {
                     </div>
                     <br />
                     <div className='bg-[#2B2E7F] shadow-md text-white w-[70%] xs:m-auto sm:m-auto md:m-auto rounded-full flex justify-center items-center py-4  text-2xl font-bold px-4'>
-                        <button >Sign In</button>
+                        <button onClick={handleLogin}>Login</button>
                     </div>
                     <br /><br />
                     <hr className='w-[70%] hr-text m-auto'  data-content="or continue with"/>
@@ -76,6 +100,18 @@ const Login = () => {
             </div>
         </div>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+        />
     </div>
   );
 }
