@@ -25,6 +25,7 @@ import Achievements from './components/Achievements/Achievements';
 import ArAbout from './ArabicComponents/ArAbout/ArAbout';
 import ArLogin from './ArabicComponents/ArLogin/ArLogin';
 import ArCourses from './ArabicComponents/ArCourses/ArCourses';
+import ArDeleteAccount from './ArabicComponents/ArDeleteAccount/ArDeleteAccount';
 import ArSignup from './ArabicComponents/ArSignup/ArSignup';
 import ArProfile from './ArabicComponents/ArProfile/ArProfile';
 import ArEditProfile from './ArabicComponents/ArEditProfile/ArEditProfile';
@@ -74,7 +75,7 @@ function App() {
         <Route index element={<ArEditProfile />} />
           <Route path='edit-profile' element={<ArEditProfile />}/>
           <Route path='achievements' element={<Achievements />}/>
-          <Route path='delete-account' element={<DeleteAccount />}/>
+          <Route path='delete-account' element={<ArDeleteAccount />}/>
           <Route path='account-security' element={<AccountSecurity />}/>
           <Route path='my-courses' element={<ArMyCourses />}>
             <Route index element={<AllCourses />} />

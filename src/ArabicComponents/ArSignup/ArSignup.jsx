@@ -2,13 +2,21 @@ import React, { useState } from "react";
 import { AiOutlineHome } from "react-icons/ai";
 import logo from "../../assets/images/YLE-logo.png";
 import loginImg from "../../assets/images/Exlorer_Illustration1.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { baseUrl } from "../../Api/Api";
 
 const ArSignup = () => {
   const [userName, setUserName] = useState("");
+  const newName = userName.split(" ")
+  const firstName = newName[0]
+  const secondName = newName[1]
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate()
 
   const confirmPass = () => {
     if (password === confirmPassword) {
@@ -18,9 +26,31 @@ const ArSignup = () => {
     }
   };
 
-  console.log(confirmPass());
+  const handleSignup =(e)=>{
+    e.preventDefault()
+    axios.post(`${baseUrl}/Account/register`,{
+      email: email,
+      firstName: firstName,
+      lastName: secondName,
+      password:password 
+    }).then((response)=>{
+      navigate('/login')
+          
+    }).catch((error)=>{
+        console.log(error);
+        toast.error(`${error.response.data}`, {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
+    })
+}
 
-  const handleSignup = (e) => {};
   return (
     <div className="bg-[#FDF8EE] w-full h-screen py-6">
       <div className="m-auto max-w-[1280px]">
@@ -68,7 +98,7 @@ const ArSignup = () => {
               <input
                 type="text"
                 className="px-8 xs:py-2 my-2 py-3 text-[#6C70D1] text-lg rounded-full border-2 border-[#6C70D1] w-[70%]"
-                placeholder="halim@gmail.com"
+                placeholder="Mohamed Abdelhaleam"
                 onChange={(e) => {
                   setUserName(e.target.value);
                 }}
@@ -96,7 +126,7 @@ const ArSignup = () => {
               <input
                 type="password"
                 className="px-8 xs:py-2 my-2 py-3 text-[#6C70D1] text-lg rounded-full border-2 border-[#6C70D1] w-[70%]"
-                placeholder="halim@gmail.com"
+                placeholder="123456789"
                 onChange={(e) => {
                   setPassword(e.target.value);
                 }}
@@ -110,7 +140,7 @@ const ArSignup = () => {
               <input
                 type="password"
                 className="px-8 xs:py-2 my-2 py-3 text-[#6C70D1] text-lg rounded-full border-2 border-[#6C70D1] w-[70%]"
-                placeholder="halim@gmail.com"
+                placeholder="123456789"
                 onChange={(e) => {
                   setConfirmPassword(e.target.value);
                 }}
@@ -119,10 +149,10 @@ const ArSignup = () => {
               <br />
               <br />
               <div
-                className="bg-[#2B2E7F] text-white w-[70%] m-auto xs:m-auto sm:m-auto md:m-auto rounded-full flex justify-center items-center py-4 text-2xl font-bold px-4"
+                className={confirmPass() ? "bg-[#2B2E7F] text-white w-[70%] m-auto xs:m-auto transition-all duration-100 ease-in-out sm:m-auto md:m-auto rounded-full flex border-2 border-[#2B2E7F] justify-center items-center py-4 text-2xl font-bold px-4" :"bg-white text-[#2B2E7F] border-2 border-[#2B2E7F] w-[70%] m-auto xs:m-auto sm:m-auto md:m-auto rounded-full flex justify-center items-center py-4 text-2xl font-bold px-4 cursor-not-allowed"}
                 onClick={handleSignup}
               >
-                <button disabled={confirmPass}>إنشاء حساب</button>
+                <button disabled={confirmPass()}>إنشاء حساب</button>
               </div>
             </form>
           </div>
@@ -131,6 +161,18 @@ const ArSignup = () => {
           </div>
         </div>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+        />
     </div>
   );
 };

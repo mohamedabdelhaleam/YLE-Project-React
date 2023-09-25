@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../../assets/images/YLE-logo.png'
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 const ArNavbar = () => {
@@ -20,7 +20,9 @@ const ArNavbar = () => {
                         <li><NavLink to='/contact-us' className='active:text-[#FF7426] text-[#1D1D1D] text-lg font-semibold capitalize'>اتصل بنا</NavLink></li>
                     </ul>
                     <div className='text-2xl font-medium capitalize bg-[#4D2C5E] rounded-full text-white py-2 px-8'>
+                        <Link to="/login">
                         تسجيل الدخول
+                        </Link>
                     </div>
                 </div>
             </div>

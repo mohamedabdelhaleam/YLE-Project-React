@@ -12,7 +12,6 @@ import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
     const [email , setEmail] = useState("")
     const [password , setPassword] = useState("")
-    const [userData , setUserData] = useState({})
     const navigate = useNavigate()
 
 
@@ -22,7 +21,6 @@ const Login = () => {
             email: email,
             password: password
         }).then((response)=>{
-            setUserData(response.data)
             localStorage.setItem("YleUserToken",response.data.token)
             navigate('/en/profile')
         }).catch((error)=>{

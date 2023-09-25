@@ -93,7 +93,7 @@ const ArProfile = () => {
                                 setIsPrivacy(false)
                                 setIsDeleteAccount(false)
                             }
-                            }> خصوصية </Link></li>
+                            }> الانجازات </Link></li>
                             <li className={isPrivacy ?'py-2 rounded-md bg-[#FF7426] text-white  px-5':"py-2 px-5"}> <Link to="privacy" onClick={
                             (e)=>{
                                 setIsEditCourses(false)
@@ -103,7 +103,7 @@ const ArProfile = () => {
                                 setIsPrivacy(true)
                                 setIsDeleteAccount(false)
                             }
-                            }> إنجازات</Link> </li>
+                            }> الخصوصية</Link> </li>
                             <li className={isDeleteAccount ?'py-2 rounded-md bg-[#FF7426] text-white  px-5':"py-2 px-5"}> <Link to="delete-account" onClick={
                             (e)=>{
                                 setIsEditCourses(false)

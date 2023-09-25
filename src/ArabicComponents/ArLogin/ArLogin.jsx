@@ -25,6 +25,7 @@ const ArLogin = () => {
         }).then((response)=>{
             setUserData(response.data)
             localStorage.setItem("YleUserToken",response.data.token)
+            localStorage.setItem("YleUserId",response.data.id)
             navigate('/profile')
         }).catch((error)=>{
             console.log(error);
